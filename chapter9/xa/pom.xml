@@ -13,7 +13,8 @@
     <name>Camel in Action :: Chapter 9 :: XA Transactions</name>
 
     <properties>
-        <atomikos-version>3.8.0</atomikos-version>
+        <narayana-version>5.1.1.Final</narayana-version>
+        <jboss-logging-version>3.2.1.Final</jboss-logging-version>
     </properties>
 
     <dependencies>
@@ -40,30 +41,15 @@
         </dependency>
 
         <dependency>
-            <groupId>com.atomikos</groupId>
-            <artifactId>transactions</artifactId>
-            <version>${atomikos-version}</version>
+            <groupId>org.jboss.narayana.jta</groupId>
+            <artifactId>narayana-jta</artifactId>
+            <version>${narayana-version}</version>
         </dependency>
+
         <dependency>
-            <groupId>com.atomikos</groupId>
-            <artifactId>transactions-jta</artifactId>
-            <version>${atomikos-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.atomikos</groupId>
-            <artifactId>transactions-jms</artifactId>
-            <version>${atomikos-version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>javax.jms</groupId>
-                    <artifactId>jms</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.atomikos</groupId>
-            <artifactId>transactions-jdbc</artifactId>
-            <version>${atomikos-version}</version>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
+            <version>${jboss-logging-version}</version>
         </dependency>
 
         <dependency>
@@ -94,6 +80,7 @@
             <groupId>hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
             <scope>test</scope>
+            <version>2.3.2</version>
         </dependency>
 
         <dependency>
